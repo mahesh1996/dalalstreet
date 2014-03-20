@@ -4,6 +4,46 @@
 		"selected_items":
 		[
 			[
+				"total",
+				"total_cash_in_hand"
+			],
+			[
+				"tota",
+				"total_cash_in_hand"
+			],
+			[
+				"play",
+				"player"
+			],
+			[
+				"com",
+				"company"
+			],
+			[
+				"compa",
+				"company"
+			],
+			[
+				"pi",
+				"pivot"
+			],
+			[
+				"pla",
+				"player"
+			],
+			[
+				"fir",
+				"first"
+			],
+			[
+				"op",
+				"option	Tag"
+			],
+			[
+				"sett",
+				"setting"
+			],
+			[
 				"sell",
 				"sell_ratio"
 			],
@@ -20,32 +60,12 @@
 				"include"
 			],
 			[
-				"com",
-				"company_id"
-			],
-			[
-				"compa",
-				"company_id"
-			],
-			[
 				"comp",
 				"company_id"
 			],
 			[
-				"tota",
-				"total_shares"
-			],
-			[
-				"pla",
-				"player"
-			],
-			[
 				"print",
 				"print_r"
-			],
-			[
-				"total",
-				"total_players"
 			],
 			[
 				"coma",
@@ -494,111 +514,11 @@
 			[
 				"modal",
 				"modalID"
-			],
-			[
-				"preow",
-				"preownedbook_id"
-			],
-			[
-				"sle",
-				"selection"
-			],
-			[
-				"selec",
-				"selected"
-			],
-			[
-				"sele",
-				"selected"
-			],
-			[
-				"Book",
-				"book"
 			]
 		]
 	},
 	"buffers":
 	[
-		{
-			"file": "app/routes.php",
-			"settings":
-			{
-				"buffer_size": 1160,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/controllers/BrokerController.php",
-			"settings":
-			{
-				"buffer_size": 676,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/broker/index.blade.php",
-			"settings":
-			{
-				"buffer_size": 214,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "public/assets/js/broker.js",
-			"settings":
-			{
-				"buffer_size": 6694,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/controllers/TradeController.php",
-			"settings":
-			{
-				"buffer_size": 4196,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/controllers/ProjectorController.php",
-			"settings":
-			{
-				"buffer_size": 238,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "public/assets/css/style.css",
-			"settings":
-			{
-				"buffer_size": 317,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/broker/part.blade.php",
-			"settings":
-			{
-				"buffer_size": 2498,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/login.blade.php",
-			"settings":
-			{
-				"buffer_size": 1444,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/controllers/UserController.php",
-			"settings":
-			{
-				"buffer_size": 1109,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -744,41 +664,62 @@
 	},
 	"file_history":
 	[
-		"/home/harsh/Projects/Dalalstreet/app/models/Player.php",
-		"/home/harsh/Projects/Dalalstreet/app/database/migrations/2014_03_19_082930_dalalstreet_users_setup.php",
-		"/home/harsh/Projects/Dalalstreet/app/database/seeds/SettingSeeder.php",
-		"/home/harsh/Projects/Dalalstreet/app/models/Setting.php",
-		"/home/harsh/Projects/Dalalstreet/app/database/migrations/2014_03_19_093850_dalalstreet_settings_setup.php",
+		"/home/harsh/Projects/Dalalstreet/app/storage/logs/laravel.log",
+		"/home/harsh/Projects/Dalalstreet/app/database/seeds/PlayerSeeder.php",
+		"/home/harsh/Projects/Dalalstreet/app/filters.php",
+		"/home/harsh/Projects/Dalalstreet/app/config/app.php",
 		"/home/harsh/Projects/Dalalstreet/app/database/migrations/2014_03_18_133452_dalalstreet_system_setup.php",
+		"/home/harsh/Projects/Dalalstreet/app/views/broker/index.blade.php",
+		"/home/harsh/Projects/Dalalstreet/app/views/projector/part.blade.php",
+		"/home/harsh/Projects/Dalalstreet/app/views/broker/part.blade.php",
+		"/home/harsh/Projects/Dalalstreet/app/controllers/TradeController.php",
+		"/home/harsh/Projects/Dalalstreet/app/views/projector/index.blade.php",
+		"/home/harsh/Projects/Dalalstreet/app/views/admin/index.blade.php",
+		"/home/harsh/Projects/Dalalstreet/app/routes.php",
+		"/home/harsh/Projects/Dalalstreet/app/models/Player.php",
+		"/home/harsh/Projects/Dalalstreet/app/models/Company.php",
+		"/home/harsh/Projects/Dalalstreet/app/views/admin/part.blade.php",
+		"/home/harsh/Projects/Dalalstreet/app/config/dalalstreet.php",
+		"/home/harsh/Projects/Dalalstreet/app/controllers/AdminController.php",
+		"/home/harsh/Projects/Dalalstreet/public/assets/css/style.css",
+		"/home/harsh/Projects/Dalalstreet/app/controllers/BrokerController.php",
+		"/home/harsh/Projects/Dalalstreet/public/assets/js/broker.js",
+		"/home/harsh/Projects/Dalalstreet/app/database/seeds/CompanySeeder.php",
+		"/home/harsh/Projects/Dalalstreet/app/controllers/NewsController.php",
+		"/home/harsh/Projects/Dalalstreet/app/database/migrations/2014_03_19_093850_dalalstreet_settings_setup.php",
+		"/home/harsh/Projects/Dalalstreet/app/views/news/part.blade.php",
+		"/home/harsh/Projects/Dalalstreet/app/views/news/index.blade.php",
+		"/home/harsh/Projects/Dalalstreet/public/assets/js/news.js",
+		"/home/harsh/Projects/Dalalstreet/app/models/News.php",
+		"/home/harsh/Projects/Dalalstreet/app/database/seeds/NewsSeeder.php",
+		"/home/harsh/Projects/Dalalstreet/app/database/migrations/2014_03_19_125913_dalalstreet_news_system.php",
 		"/home/harsh/Projects/Dalalstreet/app/database/seeds/DatabaseSeeder.php",
+		"/home/harsh/Projects/Dalalstreet/app/database/seeds/SettingSeeder.php",
+		"/home/harsh/Projects/Dalalstreet/app/controllers/UserController.php",
+		"/home/harsh/Projects/Dalalstreet/app/views/login.blade.php",
+		"/home/harsh/Projects/Bookhut/public/css/style.css",
+		"/home/harsh/Projects/Dalalstreet/app/controllers/ProjectorController.php",
+		"/home/harsh/Projects/Dalalstreet/public/assets/js/projector.js",
+		"/home/harsh/Projects/Dalalstreet/public/assets/js/admin.js",
+		"/home/harsh/Projects/Dalalstreet/app/views/layout.blade.php",
+		"/home/harsh/Projects/Bookhut/app/views/base/layout.blade.php",
+		"/home/harsh/Projects/Bookhut/public/js/cart.js",
+		"/home/harsh/Projects/Dalalstreet/app/database/migrations/2014_03_19_082930_dalalstreet_users_setup.php",
+		"/home/harsh/Projects/Dalalstreet/app/models/Setting.php",
 		"/home/harsh/Projects/Dalalstreet/app/database/seeds/SettingsSeeder.php",
 		"/home/harsh/Projects/Dalalstreet/app/models/Settings.php",
 		"/home/harsh/Projects/Bookhut/app/controllers/LoginController.php",
 		"/home/harsh/Projects/Bookhut/app/controllers/UserController.php",
-		"/home/harsh/Projects/Dalalstreet/app/views/projector/index.blade.php",
 		"/home/harsh/Projects/Dalalstreet/app/views/navbar.blade.php",
-		"/home/harsh/Projects/Dalalstreet/app/views/login.blade.php",
-		"/home/harsh/Projects/Dalalstreet/app/controllers/UserController.php",
 		"/home/harsh/Projects/Dalalstreet/app/database/seeds/UserSeeder.php",
-		"/home/harsh/Projects/Dalalstreet/app/database/seeds/CompanySeeder.php",
 		"/home/harsh/Projects/Dalalstreet/app/models/User.php",
 		"/home/harsh/Projects/Dalalstreet/app/database/migrations/2014_03_19_082930_dalalstret_users_setup.php",
-		"/home/harsh/Projects/Dalalstreet/public/assets/css/style.css",
 		"/home/harsh/Projects/Bookhut/app/views/login.blade.php",
-		"/home/harsh/Projects/Dalalstreet/app/filters.php",
-		"/home/harsh/Projects/Dalalstreet/app/views/broker/part.blade.php",
 		"/home/harsh/Projects/Dalalstreet/app/config/session.php",
-		"/home/harsh/Projects/Dalalstreet/app/config/app.php",
-		"/home/harsh/Projects/Dalalstreet/app/database/seeds/PlayerSeeder.php",
-		"/home/harsh/Projects/Dalalstreet/app/models/Company.php",
 		"/home/harsh/Projects/Dalalstreet/public/assets/css/projector.css",
-		"/home/harsh/Projects/Dalalstreet/app/views/layout.blade.php",
 		"/home/harsh/Projects/Bookhut/app/models/Book.php",
 		"/home/harsh/Projects/Dalalstreet/app/controllers/BuyController.php",
 		"/home/harsh/Projects/Bookhut/app/controllers/CartController.php",
-		"/home/harsh/Projects/Dalalstreet/app/config/dalalstreet.php",
-		"/home/harsh/Projects/Dalalstreet/app/controllers/ProjectorController.php",
-		"/home/harsh/Projects/Dalalstreet/app/controllers/BrokerController.php",
 		"/home/harsh/Projects/Dalalstreet/app/database/seeds/PlayerSeeser.php",
 		"/home/harsh/Projects/Bookhut/app/database/migrations/2014_01_18_134416_CreateBookhutTables.php",
 		"/home/harsh/Projects/Dalalstreet/app/config/database.php",
@@ -850,28 +791,7 @@
 		"/home/harsh/Projects/NYC/assets/css/theme.css",
 		"/home/harsh/Projects/TechFest/assets/vendor/js/jquery.js",
 		"/home/harsh/Projects/Symfony/app/php.ini",
-		"/home/harsh/Downloads/rrssb-master/index.html",
-		"/home/harsh/Downloads/rrssb-master/css/rrssb.css",
-		"/home/harsh/Downloads/rrssb-master/js/rrssb.min.js",
-		"/home/harsh/Projects/localdev/typeahead/js/main.js",
-		"/home/harsh/Projects/localdev/typeahead/js/ghostwriter.min.js",
-		"/home/harsh/Projects/Bookhut/app/views/base/layout.blade.php",
-		"/home/harsh/Projects/Bookhut/public/css/style.css",
-		"/home/harsh/Projects/Bookhut/public/css/tweak.css",
-		"/home/harsh/Projects/NYC/assets/vendor/js/shuffle.js",
-		"/home/harsh/Projects/NYC/assets/vendor/css/typeahead.css",
-		"/home/harsh/Projects/localdev/ta/css/examples.css",
-		"/home/harsh/Projects/localdev/ta/js/examples.js",
-		"/home/harsh/Projects/localdev/typeahead/index.html",
-		"/home/harsh/Projects/NYC/api/city.json",
-		"/home/harsh/Projects/NYC/api/institutes.json",
-		"/home/harsh/Projects/localdev/ta/js/ghostwriter.min.js",
-		"/home/harsh/Projects/localdev/ta/examples/index.html",
-		"/home/harsh/Downloads/typeahead.js-bootstrap3.less-master/example/example.html",
-		"/home/harsh/Projects/NYC/assets/vendor/timeline/js/storyjs.js",
-		"/home/harsh/Projects/NYC/cover.css",
-		"/home/harsh/Projects/NYC/.gitignore",
-		"/home/harsh/Downloads/jquery.shuffleLetters/index.html"
+		"/home/harsh/Downloads/rrssb-master/index.html"
 	],
 	"find":
 	{
@@ -882,6 +802,7 @@
 		"height": 0.0,
 		"where_history":
 		[
+			"/home/harsh/Projects/Dalalstreet/app",
 			"/home/harsh/Projects/Bookhut/app",
 			"/home/harsh/Projects/Bookhut/app,*.php",
 			"/home/harsh/Projects/Bookhut/app",
@@ -917,134 +838,134 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"default",
-			"Go",
-			"go",
-			"projector",
-			"broker",
-			"intended",
-			"password",
-			"string",
-			"post",
+			"total_cash_in_hand",
+			"recession",
+			"market_price",
+			"500000",
+			"starting_cash",
+			",\n",
+			"total_players",
+			"players",
+			"total_players",
+			"total_shares",
+			"company",
+			"company_id",
+			"company_player",
+			"where",
+			"finish_the_game",
+			"give_dividend",
+			"'));\n",
+			"finish_the_game",
+			") ",
+			"%",
+			"Available",
+			"true",
+			"auth",
+			"decrement",
+			"player_id",
+			"company_id",
+			"number",
+			"total_shares",
+			", 'class' => 'form-centered'",
+			"give_dividend",
+			"Dividend",
+			"total_cash_in_hand",
+			")->",
+			"player",
+			"players",
+			"companies",
+			"company_player",
+			"give_dividend",
+			"player_id",
+			"give_dividend",
+			"players",
+			"dividend",
+			"divident",
+			"500000",
+			"starting_cash",
+			"divident",
+			" {",
+			"total_players",
+			"companies",
+			"comp",
+			"total_shares",
+			"total_cash_in_hand",
+			"total_shares",
+			"decrement",
+			"company_id",
+			"company",
+			"get",
+			"setting",
+			"comp_select",
+			"value",
+			"(\"",
+			"Setting",
+			"set_sell_ratio",
+			"create_company",
+			"comp_market_price",
+			"comp_market_price_cons",
+			"comp_market_price",
+			"comp_name",
+			"comp_select",
+			"Launch",
+			"Player",
+			"players",
+			"Name",
+			"delay: 800",
+			"delay: 1500",
+			"delay: 3500",
+			"increment",
+			"first",
+			"votes",
+			"company_id",
+			"users",
+			"())",
+			"10",
+			"73",
+			"comp_total_shares",
+			"10",
+			"60000",
+			"\"off\">",
+			"give_dividend",
+			"news_input",
+			"comp_total_shars",
+			"news_input",
+			"input",
+			"news_input",
+			"Boom",
+			"Spread",
+			"value=\"{{ $news->text }}\"",
+			"Shares",
+			"Name",
+			"part",
+			"News",
+			"h4",
+			"news",
+			"text",
+			"set_buy_ratio",
+			"html",
+			"main",
+			"updater",
+			"admin",
+			"OKay",
+			"info",
+			"warning",
+			"danger",
+			"selected",
+			"Info",
+			"Danger",
+			"New",
+			"addon",
+			"desc",
+			"ul",
+			"< ",
+			"text",
+			"a",
+			"div",
+			"Reliance",
 			"buy_ratio",
 			"key",
-			"buy_ratio",
-			"name",
-			"value",
-			"buy_ratio",
-			"findByKey",
-			"setting",
-			"buy_ratio",
-			"players",
-			";\n",
-			"decimal",
-			"sell_ratio",
-			"settings_key",
-			"buy_ratio",
-			"decimal",
-			"integer",
-			"string",
-			"broker",
-			"post",
-			"BrokerController",
-			"part",
-			"bind",
-			"Hi",
-			"sm",
-			"left",
-			"text",
-			"h3",
-			"h4",
-			"broker",
-			"user",
-			"Player",
-			"player",
-			"email",
-			"id",
-			"increments",
-			"table",
-			"mb",
-			"wrong",
-			"getLoginRules",
-			"RemindableInterface",
-			"Game",
-			"Dalal",
-			"align",
-			"login",
-			"                        ",
-			"before",
-			"login",
-			"logout",
-			"120",
-			"bind",
-			"sell",
-			"index",
-			"broker",
-			"Company",
-			"market_price",
-			"company_id",
-			"attach",
-			"post",
-			"market_price",
-			"*0.1",
-			"focused",
-			"bootflat",
-			"css",
-			"projector",
-			"company",
-			"companies",
-			"company",
-			"Company",
-			"comp",
-			"belongsTo",
-			"belongsToMany",
-			"dd",
-			"get",
-			"print_r",
-			"('')->",
-			"company",
-			"total_cash_in_hand",
-			"player",
-			"comp",
-			"h4",
-			"4",
-			"center",
-			"h3",
-			"h4",
-			"top",
-			"6",
-			"player",
-			"players",
-			"users",
-			"user",
-			"User",
-			"200",
-			"%</span></td>",
-			"info",
-			"old_market_price",
-			"total_cash_in_hand",
-			"attrib_html_title",
-			"ceil",
-			"title",
-			"delta",
-			"decrement",
-			"number",
-			");",
-			"number",
-			"available_shares",
-			"company_id",
-			"buy",
-			"buyShares",
-			"buy",
-			"buyShares",
-			"get",
-			"market_price",
-			"name",
-			"company_id",
-			"number",
-			"price",
-			"'));",
-			"name"
+			"set"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1079,282 +1000,8 @@
 	"groups":
 	[
 		{
-			"selected": 2,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "app/routes.php",
-					"settings":
-					{
-						"buffer_size": 1160,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								446,
-								446
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "app/controllers/BrokerController.php",
-					"settings":
-					{
-						"buffer_size": 676,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								393,
-								393
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "app/views/broker/index.blade.php",
-					"settings":
-					{
-						"buffer_size": 214,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								95,
-								95
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Laravel Blade Highlighter/laravel-blade.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "public/assets/js/broker.js",
-					"settings":
-					{
-						"buffer_size": 6694,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								5214,
-								5214
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1125.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "app/controllers/TradeController.php",
-					"settings":
-					{
-						"buffer_size": 4196,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2028,
-								2028
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "app/controllers/ProjectorController.php",
-					"settings":
-					{
-						"buffer_size": 238,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								238,
-								238
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "public/assets/css/style.css",
-					"settings":
-					{
-						"buffer_size": 317,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								221,
-								221
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 15.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "app/views/broker/part.blade.php",
-					"settings":
-					{
-						"buffer_size": 2498,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2407,
-								2407
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Laravel Blade Highlighter/laravel-blade.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "app/views/login.blade.php",
-					"settings":
-					{
-						"buffer_size": 1444,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								36,
-								36
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Laravel Blade Highlighter/laravel-blade.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "app/controllers/UserController.php",
-					"settings":
-					{
-						"buffer_size": 1109,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								829,
-								829
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -1400,12 +1047,172 @@
 		"selected_items":
 		[
 			[
-				"2014user",
-				"app/database/migrations/2014_03_19_082930_dalalstreet_users_setup.php"
+				"admin",
+				"app/controllers/AdminController.php"
+			],
+			[
+				"dalal",
+				"app/config/dalalstreet.php"
+			],
+			[
+				"compa",
+				"app/models/Company.php"
+			],
+			[
+				"player",
+				"app/models/Player.php"
+			],
+			[
+				"dalalt",
+				"app/config/dalalstreet.php"
+			],
+			[
+				"index",
+				"app/views/admin/index.blade.php"
+			],
+			[
+				"adminpar",
+				"app/views/admin/part.blade.php"
+			],
+			[
+				"tra",
+				"app/controllers/TradeController.php"
+			],
+			[
+				"part",
+				"app/views/broker/part.blade.php"
+			],
+			[
+				"play",
+				"app/models/Player.php"
+			],
+			[
+				"projecpart",
+				"app/views/projector/part.blade.php"
+			],
+			[
+				"config",
+				"app/config/app.php"
+			],
+			[
+				"filte",
+				"app/filters.php"
+			],
+			[
+				"trade",
+				"app/controllers/TradeController.php"
+			],
+			[
+				"trad",
+				"app/controllers/TradeController.php"
+			],
+			[
+				"broker",
+				"public/assets/js/broker.js"
+			],
+			[
+				"broke",
+				"app/controllers/BrokerController.php"
+			],
+			[
+				"laravel",
+				"app/storage/logs/laravel.log"
+			],
+			[
+				"brok",
+				"public/assets/js/broker.js"
+			],
+			[
+				"broker.",
+				"public/assets/js/broker.js"
+			],
+			[
+				"compan",
+				"app/database/seeds/CompanySeeder.php"
+			],
+			[
+				"201settin",
+				"app/database/migrations/2014_03_19_093850_dalalstreet_settings_setup.php"
+			],
+			[
+				"2014",
+				"app/database/migrations/2014_03_18_133452_dalalstreet_system_setup.php"
+			],
+			[
+				"newscon",
+				"app/controllers/NewsController.php"
+			],
+			[
+				"2014new",
+				"app/database/migrations/2014_03_19_125913_dalalstreet_news_system.php"
+			],
+			[
+				"adminc",
+				"app/controllers/AdminController.php"
+			],
+			[
+				"newssee",
+				"app/database/seeds/NewsSeeder.php"
+			],
+			[
+				"newspart",
+				"app/views/news/part.blade.php"
+			],
+			[
+				"data",
+				"app/database/seeds/DatabaseSeeder.php"
+			],
+			[
+				"news",
+				"app/database/migrations/2014_03_19_125913_dalalstreet_news_system.php"
 			],
 			[
 				"setting",
-				"app/database/migrations/2014_03_19_093850_dalalstreet_settings_setup.php"
+				"app/database/seeds/SettingSeeder.php"
+			],
+			[
+				"rou",
+				"app/routes.php"
+			],
+			[
+				"projecindex",
+				"app/views/projector/index.blade.php"
+			],
+			[
+				"projector.",
+				"public/assets/js/projector.js"
+			],
+			[
+				"project",
+				"app/controllers/ProjectorController.php"
+			],
+			[
+				"projectorindex",
+				"app/views/projector/index.blade.php"
+			],
+			[
+				"dalalstr",
+				"app/config/dalalstreet.php"
+			],
+			[
+				"login",
+				"app/views/login.blade.php"
+			],
+			[
+				"index.blade",
+				"app/views/admin/index.blade.php"
+			],
+			[
+				"layout",
+				"app/views/layout.blade.php"
+			],
+			[
+				"layou",
+				"app/views/layout.blade.php"
+			],
+			[
+				"2014user",
+				"app/database/migrations/2014_03_19_082930_dalalstreet_users_setup.php"
 			],
 			[
 				"settin",
@@ -1416,28 +1223,8 @@
 				"app/database/seeds/DatabaseSeeder.php"
 			],
 			[
-				"player",
-				"app/models/Player.php"
-			],
-			[
-				"part",
-				"app/views/broker/part.blade.php"
-			],
-			[
-				"index",
-				"app/views/broker/index.blade.php"
-			],
-			[
-				"2014",
-				"app/database/migrations/2014_03_18_133452_dalalstreet_system_setup.php"
-			],
-			[
 				"usercon",
 				"app/controllers/UserController.php"
-			],
-			[
-				"login",
-				"app/views/login.blade.php"
 			],
 			[
 				"users",
@@ -1480,10 +1267,6 @@
 				"public/assets/css/style.css"
 			],
 			[
-				"compa",
-				"app/models/Company.php"
-			],
-			[
 				"proindex",
 				"app/views/projector/index.blade.php"
 			],
@@ -1496,10 +1279,6 @@
 				"app/database/seeds/PlayerSeeder.php"
 			],
 			[
-				"layout",
-				"app/views/layout.blade.php"
-			],
-			[
 				"styl",
 				"public/assets/css/style.css"
 			],
@@ -1508,44 +1287,12 @@
 				"app/database/seeds/PlayerSeeder.php"
 			],
 			[
-				"trade",
-				"app/controllers/TradeController.php"
-			],
-			[
-				"compan",
-				"app/models/Company.php"
-			],
-			[
-				"project",
-				"app/controllers/ProjectorController.php"
-			],
-			[
-				"layou",
-				"app/views/layout.blade.php"
-			],
-			[
 				"dala",
 				"app/config/dalalstreet.php"
 			],
 			[
-				"dalal",
-				"app/config/dalalstreet.php"
-			],
-			[
-				"index.blade",
-				"app/views/projector/index.blade.php"
-			],
-			[
-				"data",
-				"app/database/seeds/DatabaseSeeder.php"
-			],
-			[
 				"navba",
 				"app/views/navbar.blade.php"
-			],
-			[
-				"rou",
-				"app/routes.php"
 			],
 			[
 				"defaultcon",
@@ -1566,10 +1313,6 @@
 			[
 				"sec",
 				"config/security.yml"
-			],
-			[
-				"config",
-				"config/config.yml"
 			],
 			[
 				"routing_",
@@ -1814,102 +1557,6 @@
 			[
 				"profilercon",
 				"app/config/packages/sebklaus/profiler/config.php"
-			],
-			[
-				"browselayout",
-				"app/views/browse/layout.blade.php"
-			],
-			[
-				"baselayout",
-				"app/views/base/layout.blade.php"
-			],
-			[
-				"browse",
-				"app/views/browse/layout.blade.php"
-			],
-			[
-				"invoice",
-				"app/views/cart/invoice.blade.php"
-			],
-			[
-				"basecon",
-				"app/controllers/BaseController.php"
-			],
-			[
-				"review.bla",
-				"app/views/sell/review.blade.php"
-			],
-			[
-				"review",
-				"app/views/sell/review.blade.php"
-			],
-			[
-				"rece",
-				"app/models/Receipt.php"
-			],
-			[
-				"view.blade",
-				"app/views/cart/view.blade.php"
-			],
-			[
-				"first",
-				"app/views/sell/first.blade.php"
-			],
-			[
-				"edit.",
-				"app/views/sell/edit.blade.php"
-			],
-			[
-				"sell/",
-				"app/views/sell/review.blade.php"
-			],
-			[
-				"basket",
-				"app/models/Basket.php"
-			],
-			[
-				"cartcont",
-				"app/controllers/CartController.php"
-			],
-			[
-				"userbook",
-				"app/models/UserBook.php"
-			],
-			[
-				"sell.bla",
-				"app/views/base/menu/sell.blade.php"
-			],
-			[
-				"cart.blade",
-				"app/views/base/menu/cart.blade.php"
-			],
-			[
-				"signup",
-				"app/views/signup.blade.php"
-			],
-			[
-				"pre.js",
-				"public/js/pre.js"
-			],
-			[
-				"three",
-				"app/views/base/three.blade.php"
-			],
-			[
-				"cartview",
-				"app/views/cart/view.blade.php"
-			],
-			[
-				"review.blade",
-				"app/views/sell/review.blade.php"
-			],
-			[
-				"sell.blade",
-				"app/views/base/menu/sell.blade.php"
-			],
-			[
-				"basecontro",
-				"app/controllers/BaseController.php"
 			]
 		],
 		"width": 0.0
