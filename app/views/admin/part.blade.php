@@ -1,3 +1,4 @@
+<div class="panel panel-default">
 <table class="table table-bordered table-hover">
   <thead>
     <th>Player</th>
@@ -20,7 +21,8 @@
     @endforeach
   </tbody>
 </table>
-<br>
+</div>
+<div class="panel panel-default">
 <table class="table">
   <thead>
     <tr>
@@ -65,3 +67,4 @@
     @endforeach
   </tbody>
 </table>
+</div>

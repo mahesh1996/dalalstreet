@@ -6,11 +6,17 @@ class AdminController extends BaseController {
     $broker = Auth::user();
     $settings = Setting::all();
     $news = News::orderBy('id', 'desc')->first();
-    $players = Player::orderBy('total_cash_in_hand', 'desc')->get();
     $companies = Company::all();
 		$title = "Admin - Dalal Street";
-		return View::make("admin.index", compact('broker','title', 'players', 'settings', 'news', 'companies'));
+		return View::make("admin.index", compact('broker','title', 'settings', 'news', 'companies'));
 	}
+
+  public function player_details() {
+    $title = "Player Details - Dalal Street";
+    $companies = Company::all();
+    $players = Player::orderBy('total_cash_in_hand', 'desc')->get();
+    return View::make("admin.details", compact('title', 'players', 'companies'));
+  }
 
   public function part() {
     $companies = Company::all();
@@ -37,16 +43,25 @@ class AdminController extends BaseController {
   }
 
   public function give_dividend() {
-    $dividend = Config::get('dalalstreet.dividend');
+
+    $dividend_owner = Input::get("dividend_owner_input");
+    $dividend_other = Input::get("dividend_other_input");
 
     $players = Player::with(array('companies' => function($companies) {
       $companies->where('company_player.total_shares', '>', 0);
     }))->get();
 
-    DB::transaction(function() use($players, $dividend) {
+    DB::transaction(function() use($players, $dividend_owner, $dividend_other) {
+      Setting::where("key", "dividend_owner")->update(array("value" => $dividend_owner));
+      Setting::where("key", "dividend_other")->update(array("value" => $dividend_other));
       foreach ($players as $player) {
         foreach ($player->companies as $company) {
-          DB::table('players')->where('id', $player->id)->increment('total_cash_in_hand', $company->pivot->total_shares * $company->market_price * $dividend);
+          if($company->total_shares * 0.6 <= $company->pivot->total_shares) {
+            DB::table('players')->where('id', $player->id)->increment('total_cash_in_hand', $company->pivot->total_shares * $company->market_price * $dividend_owner);
+          }
+          else {
+            DB::table('players')->where('id', $player->id)->increment('total_cash_in_hand', $company->pivot->total_shares * $company->market_price * $dividend_other);
+          }
         }
       }
     });
