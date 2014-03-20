@@ -118,6 +118,9 @@
   </div>
   <div class="panel-body" style="padding-bottom:0">
   {{ Form::open(array('action' => 'do_recession', 'role' => 'form')) }}
+  <label for="recession_input">Fraction</label>
+  <input class="form-control" type="text" id="recession_input" name="recession_input" autocomplete="off" required>
+  <br>
   <button type="submit" class="btn btn-success btn-lg btn-block" type="button">Bring It On</button>
   </form>
   <br>
@@ -131,6 +134,18 @@
   <div class="panel-body" style="padding-bottom:0">
   {{ Form::open(array('action' => 'finish_the_game', 'role' => 'form')) }}
   <button type="submit" class="btn btn-success btn-lg btn-block" type="button">Finish It</button>
+  </form>
+  <br>
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h4>Reset The Game</h4>
+  </div>
+  <div class="panel-body" style="padding-bottom:0">
+  {{ Form::open(array('action' => 'reset_the_game', 'role' => 'form')) }}
+  <button type="submit" class="btn btn-success btn-lg btn-block" type="button">Reset It</button>
   </form>
   <br>
   </div>

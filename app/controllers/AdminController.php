@@ -13,8 +13,9 @@ class AdminController extends BaseController {
 	}
 
   public function part() {
+    $companies = Company::all();
     $players = Player::orderBy('total_cash_in_hand', 'desc')->get();
-    return View::make("admin.part", compact('players'));
+    return View::make("admin.part", compact('players', 'companies'));
   }
 
   public function set_buy_ratio() {
@@ -70,11 +71,20 @@ class AdminController extends BaseController {
     return Redirect::to("admin");
   }
 
+  public function reset_the_game() {
+
+    DB::transaction(function() {
+      DB::table('players')->update(array('total_cash_in_hand' => Config::get('dalalstreet.starting_cash')));
+    });
+
+    return Redirect::to("admin");
+  }
+
   public function do_recession() {
 
     $players = Player::all();
 
-    $recession = Config::get('dalalstreet.recession');
+    $recession = Input::get('recession_input');//Config::get('dalalstreet.recession');
 
     DB::transaction(function() use($players, $recession) {
       foreach ($players as $player) {
