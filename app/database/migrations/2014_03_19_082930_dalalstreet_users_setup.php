@@ -10,6 +10,7 @@ class DalalstreetUsersSetup extends Migration {
       $table->increments('id')->unsigned();
       $table->string('email');
       $table->string('password');
+      $table->string('name');
       $table->tinyInteger('type')->default(1);
       $table->timestamps();
     });
