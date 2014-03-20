@@ -19,7 +19,7 @@ class DalalstreetSystemSetup extends Migration {
 
     Schema::create('players', function($table) {
       $table->increments('id')->unsigned();
-      $table->decimal('total_cash_in_hand', 9, 0)->default(500000)->unsigned();
+      $table->decimal('total_cash_in_hand', 9, 0)->default(Config::get('dalalstreet.starting_cash'))->unsigned();
     });
 
     Schema::create('company_player', function($table) {
