@@ -45,7 +45,36 @@ Route::filter('auth.basic', function()
 });
 
 Route::filter('admin', function() {
-  
+  $user = Auth::user();
+
+  if($user->type == 1) return Redirect::to('/broker');
+  if($user->type == 2) return Redirect::to('/projector');
+  if($user->type == 3) return Redirect::to('/news');
+
+});
+
+Route::filter('projector', function() {
+  $user = Auth::user();
+
+  if($user->type == 1) return Redirect::to('/broker');
+  if($user->type == 3) return Redirect::to('/news');
+
+});
+
+Route::filter('news', function() {
+  $user = Auth::user();
+
+  if($user->type == 1) return Redirect::to('/broker');
+  if($user->type == 2) return Redirect::to('/projector');
+
+});
+
+Route::filter('broker', function() {
+  $user = Auth::user();
+
+  if($user->type == 2) return Redirect::to('/projector');
+  if($user->type == 3) return Redirect::to('/news');
+
 });
 
 /*

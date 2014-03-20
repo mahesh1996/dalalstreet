@@ -1,28 +1,37 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Application Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register all of the routes for an application.
-| It's a breeze. Simply tell Laravel the URIs it should respond to
-| and give it the Closure to execute when that URI is requested.
-|
-*/
 
 Route::group(array('before' => 'auth'), function() {
+
+Route::group(array('before' => 'broker'), function() {
 
   Route::get('broker', array('as' => 'broker', 'uses' => 'BrokerController@index'));
   Route::post('broker/part', 'BrokerController@part');
 
+  Route::post('buy', 'TradeController@buy');
+
+  Route::post('sell', 'TradeController@sell');
+  Route::post('sell/all', 'TradeController@sellAll');
+
+});
+
+Route::group(array('before' => 'projector'), function() {
+
   Route::get('projector', array('as' => 'projector', 'uses' => 'ProjectorController@index'));
   Route::post('projector/part', 'ProjectorController@part');
 
+});
+
+Route::group(array('before' => 'news'), function() {
+
   Route::get('news', array('as' => 'news', 'uses' => 'NewsController@index'));
   Route::post('news', array('as' => 'create_news', 'uses' => 'NewsController@create'));
-
   Route::post('news/part', 'NewsController@part');
+
+});
+
+
+Route::group(array('before' => 'news'), function() {
 
   Route::get('admin', array('as' => 'admin', 'uses' => 'AdminController@index'));
   Route::post('admin/part', 'AdminController@part');
@@ -36,16 +45,15 @@ Route::group(array('before' => 'auth'), function() {
   Route::post('admin/finish_the_game', array('as' => 'finish_the_game', 'uses' => 'AdminController@finish_the_game'));
   Route::post('admin/reset_the_game', array('as' => 'reset_the_game', 'uses' => 'AdminController@reset_the_game'));
 
-  Route::post('buy', 'TradeController@buy');
+});
 
-  Route::post('sell', 'TradeController@sell');
-  Route::post('sell/all', 'TradeController@sellAll');
-  
   Route::get('logout', array('as' => 'logout', 'uses' => 'UserController@logout'));
 
 });
 
 Route::group(array('before' => 'guest'), function() {
+
+  Route::get('/', array('as' => 'home', 'uses' => 'HomeController@index'));
   Route::get('login', array('as' => 'login', 'uses' => 'UserController@login'));
   Route::post('login', array('uses' => 'UserController@attempt_login'));
 });

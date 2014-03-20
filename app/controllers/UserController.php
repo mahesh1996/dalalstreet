@@ -21,12 +21,11 @@ class UserController extends BaseController {
       }
       if($user->type == 1) return Redirect::to('/broker');
       if($user->type == 2) return Redirect::to('/projector');
+      if($user->type == 3) return Redirect::to('/news');
       return Redirect::to('/admin');
     }
     else {
-      $mb = new MessageBag();
-      $mb->add("wrong", "Wrong credentials");
-      return Redirect::back()->withInput(Input::except('password'))->withErrors($mb);
+      return Redirect::back()->withInput(Input::except('password'));
     }
 
   }

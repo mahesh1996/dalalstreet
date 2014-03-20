@@ -3,15 +3,6 @@
 <div class="container-fluid main-container">
   <div class="row inner-container">
     <div class="col-lg-offset-3 col-lg-3 col-md-offset-3 col-md-3 col-sm-6 col-xs-6 text-left">
-      @if($errors->has('email') || $errors->has('password') || $errors->has('wrong'))
-        <div class="alert alert-danger">{{ $errors->first() }}</div>
-      @endif
-      @if($errors->has('reminded'))
-        <div class="alert alert-info">{{ $errors->first() }}</div>
-      @endif
-      @if($errors->has('account_created'))
-        <div class="alert alert-success">{{ $errors->first() }}</div>
-      @endif
       {{ Form::open(array('action' => 'UserController@attempt_login', 'role' => 'form', 'class' => 'form-centered')) }}
         <div class="form-group">
           <label for="email">Email</label>
