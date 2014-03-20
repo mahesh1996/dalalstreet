@@ -1,3 +1,4 @@
+<div class="panel panel-default">
 <table class="table">
   <thead>
     <tr>
@@ -22,13 +23,14 @@
     @endif
       <td>{{ $company->code }}</td>
       <td>{{ $company->name }}</td>
-      <td>{{ $company->total_shares }}</td>
-      <td>{{ $company->available_shares }}</td>
+      <td>{{ $company->print_total_shares }}</td>
+      <td>{{ $company->print_available_shares }}</td>
       <td>{{ $company->total_shares - $company->available_shares }}</td>
-      <td>{{ $company->market_price }}</td>
+      <td>{{ $company->print_market_price }}</td>
       <td>{{ $company->delta }}%</td>
     </tr>
     @endif
     @endforeach
   </tbody>
 </table>
+</div>
