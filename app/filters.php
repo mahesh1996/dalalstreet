@@ -53,30 +53,6 @@ Route::filter('admin', function() {
 
 });
 
-Route::filter('projector', function() {
-  $user = Auth::user();
-
-  if($user->type == 1) return Redirect::to('/broker');
-  if($user->type == 3) return Redirect::to('/news');
-
-});
-
-Route::filter('news', function() {
-  $user = Auth::user();
-
-  if($user->type == 1) return Redirect::to('/broker');
-  if($user->type == 2) return Redirect::to('/projector');
-
-});
-
-Route::filter('broker', function() {
-  $user = Auth::user();
-
-  if($user->type == 2) return Redirect::to('/projector');
-  if($user->type == 3) return Redirect::to('/news');
-
-});
-
 /*
 |--------------------------------------------------------------------------
 | Guest Filter
@@ -88,9 +64,8 @@ Route::filter('broker', function() {
 |
 */
 
-Route::filter('guest', function()
-{
-	if (Auth::check()) return Redirect::to('/');
+Route::filter('guest', function() {
+	if (Auth::check()) return Redirect::to('/broker');
 });
 
 /*
@@ -104,10 +79,8 @@ Route::filter('guest', function()
 |
 */
 
-Route::filter('csrf', function()
-{
-	if (Session::token() != Input::get('_token'))
-	{
+Route::filter('csrf', function() {
+	if (Session::token() != Input::get('_token')) {
 		throw new Illuminate\Session\TokenMismatchException;
 	}
 });

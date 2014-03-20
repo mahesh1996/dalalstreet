@@ -3,8 +3,6 @@
 
 Route::group(array('before' => 'auth'), function() {
 
-Route::group(array('before' => 'broker'), function() {
-
   Route::get('broker', array('as' => 'broker', 'uses' => 'BrokerController@index'));
   Route::post('broker/part', 'BrokerController@part');
 
@@ -13,27 +11,17 @@ Route::group(array('before' => 'broker'), function() {
   Route::post('sell', 'TradeController@sell');
   Route::post('sell/all', 'TradeController@sellAll');
 
-});
-
-Route::group(array('before' => 'projector'), function() {
-
   Route::get('projector', array('as' => 'projector', 'uses' => 'ProjectorController@index'));
   Route::post('projector/part', 'ProjectorController@part');
-
-});
-
-Route::group(array('before' => 'news'), function() {
 
   Route::get('news', array('as' => 'news', 'uses' => 'NewsController@index'));
   Route::post('news', array('as' => 'create_news', 'uses' => 'NewsController@create'));
   Route::post('news/part', 'NewsController@part');
 
-});
-
-
-Route::group(array('before' => 'news'), function() {
+Route::group(array('before' => 'admin'), function() {
 
   Route::get('admin', array('as' => 'admin', 'uses' => 'AdminController@index'));
+  Route::get('admin/player_details', array('as' => 'player_details', 'uses' => 'AdminController@player_details'));
   Route::post('admin/part', 'AdminController@part');
   Route::post('admin/create_company', array('as' => 'create_company', 'uses' => 'AdminController@create_company'));
   Route::post('admin/change_company', array('as' => 'change_company', 'uses' => 'AdminController@change_company'));
@@ -52,7 +40,6 @@ Route::group(array('before' => 'news'), function() {
 });
 
 Route::group(array('before' => 'guest'), function() {
-
   Route::get('/', array('as' => 'home', 'uses' => 'HomeController@index'));
   Route::get('login', array('as' => 'login', 'uses' => 'UserController@login'));
   Route::post('login', array('uses' => 'UserController@attempt_login'));
