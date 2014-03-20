@@ -1,7 +1,7 @@
 $(window).load(function() {
   setInterval(function() {
     updateScreen();
-  }, 3000)
+  }, 5000)
 });
 
 var updateScreen = function() {

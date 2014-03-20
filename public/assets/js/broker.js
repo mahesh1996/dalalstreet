@@ -13,7 +13,7 @@ var html ='<div class="modal fade" id="buy-modal" tabindex="-1" role="dialog" ar
                 +'<div class="modal-body">'
                     +'<input type="hidden" value="'+user_id+'" name="player_id" autocomplete="off">'
                     +'<input type="hidden" value="'+company_id+'" name="company_id" autocomplete="off">'
-                    +'<input type="text" class="form-control" name="number_of_shares" placeholder="Enter number of shares player wants to buy" required autocomplete="off">'
+                    +'<input type="text" class="form-control" name="number_of_shares" placeholder="Enter number of shares player wants to buy" required autocomplete="off" focus="true">'
                 +'</div>'
                 +'<div class="modal-footer">'
                   +'<button type="submit" class="btn btn-primary btn-block" id="buy-modal-go">Buy</button>'
@@ -68,7 +68,7 @@ $(window).load(function() {
   $('.ds-sell-button').bind("click", sellHandler);
   setInterval(function() {
     updateScreen();
-  }, 3000)
+  }, 5000)
 });
 
 var updateScreen = function() {
