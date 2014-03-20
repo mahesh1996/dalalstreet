@@ -34,6 +34,7 @@ Route::group(array('before' => 'auth'), function() {
   Route::post('admin/give_dividend', array('as' => 'give_dividend', 'uses' => 'AdminController@give_dividend'));
   Route::post('admin/do_recession', array('as' => 'do_recession', 'uses' => 'AdminController@do_recession'));
   Route::post('admin/finish_the_game', array('as' => 'finish_the_game', 'uses' => 'AdminController@finish_the_game'));
+  Route::post('admin/reset_the_game', array('as' => 'reset_the_game', 'uses' => 'AdminController@reset_the_game'));
 
   Route::post('buy', 'TradeController@buy');
 
