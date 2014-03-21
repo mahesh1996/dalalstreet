@@ -19,10 +19,7 @@ class UserController extends BaseController {
         $user->password = Hash::make(Input::get('password'));
         $user->save();
       }
-      if($user->type == 1) return Redirect::to('/broker');
-      if($user->type == 2) return Redirect::to('/projector');
-      if($user->type == 3) return Redirect::to('/news');
-      return Redirect::to('/admin');
+      return Redirect::to($user->role);
     }
     else {
       return Redirect::back()->withInput(Input::except('password'));

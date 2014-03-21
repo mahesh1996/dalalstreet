@@ -35,4 +35,8 @@ class Company extends Eloquent {
     return $this->attrib_mp;
   }
 
+  public function doTrade() {
+
+  }
+
 }

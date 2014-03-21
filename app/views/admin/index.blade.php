@@ -7,7 +7,7 @@
 @section('body')
 <div class="ds-nav">
   <h4 class="no-margin-top">DALAL &middot; STREET</h4>
-  <h5><a href="{{ route('logout') }}" class="btn btn-info btn-xs"><strong>Logout</strong></a> <a href="{{ route('player_details') }}" class="btn btn-info btn-xs"><strong>Player Scores</strong> - Player Details</a></h5>
+  <h5><a href="{{ route('logout') }}" class="btn btn-info btn-xs"><strong>Logout</strong></a> <a href="{{ route('player_details') }}" class="btn btn-info btn-xs"><strong>Player Scores</strong> - Player Details</a> <a href="{{ route('projector') }}" class="btn btn-info btn-xs"><strong>Projector</strong> - Price Chart</a> <a href="{{ route('broker') }}" class="btn btn-info btn-xs"><strong>Broker</strong> - See what's going on</a></h5>
   <hr>
 </div>
 <div class="container-fluid">

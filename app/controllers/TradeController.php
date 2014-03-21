@@ -8,6 +8,8 @@ class TradeController extends BaseController {
     $company_id = (int) Input::get('company_id');
     $number = (int) Input::get('number_of_shares');
 
+    Log::info(compact('player_id'));
+
     $player = Player::with(array('companies' => function($companies) use($company_id) {
       $companies->where('company_id', $company_id);
     }))->where('id', $player_id)->first();
@@ -55,6 +57,7 @@ class TradeController extends BaseController {
     $sell_ratio = Setting::where("key", "sell_ratio")->first();
 
     $new_market_price = $company->market_price - ( ( $company->market_price * $number * $sell_ratio->value) / $company->total_shares );
+
     if($new_market_price < 1) $new_market_price = 7.73;
 
     if($player->companies[0]->pivot->total_shares < $number) return Response::json(array('status' => 0)); // DO NOT HAVE THAT MUCH SHARES

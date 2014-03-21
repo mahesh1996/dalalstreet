@@ -18,13 +18,18 @@ Route::group(array('before' => 'auth'), function() {
   Route::post('news', array('as' => 'create_news', 'uses' => 'NewsController@create'));
   Route::post('news/part', 'NewsController@part');
 
+  Route::post('money_cheat', array('as' => 'money_cheat', 'uses' => 'AdminController@money_cheat'));
+
+  Route::get('player_details', array('as' => 'player_details', 'uses' => 'AdminController@player_details'));
+  Route::post('player_details/part', 'AdminController@player_details_part');
+
 Route::group(array('before' => 'admin'), function() {
 
   Route::get('admin', array('as' => 'admin', 'uses' => 'AdminController@index'));
-  Route::get('admin/player_details', array('as' => 'player_details', 'uses' => 'AdminController@player_details'));
-  Route::post('admin/part', 'AdminController@part');
+  
   Route::post('admin/create_company', array('as' => 'create_company', 'uses' => 'AdminController@create_company'));
   Route::post('admin/change_company', array('as' => 'change_company', 'uses' => 'AdminController@change_company'));
+  Route::post('admin/change_company_per', array('as' => 'change_company_per', 'uses' => 'AdminController@change_company_per'));
 
   Route::post('admin/set_buy_ratio', array('as' => 'set_buy_ratio', 'uses' => 'AdminController@set_buy_ratio'));
   Route::post('admin/set_sell_ratio', array('as' => 'set_sell_ratio', 'uses' => 'AdminController@set_sell_ratio'));

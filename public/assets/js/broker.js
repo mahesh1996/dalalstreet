@@ -1,4 +1,4 @@
-var user1, user2, u1_total_cash, u2_total_cash, u1_total_share, u2_total_share, u1_delta, u2_delta, raw;
+var raw, fake;
 
 function PrepareBuyModal(user_id, company_id, company_name) {
 
@@ -13,7 +13,7 @@ var html ='<div class="modal fade" id="buy-modal" tabindex="-1" role="dialog" ar
                 +'<div class="modal-body">'
                     +'<input type="hidden" value="'+user_id+'" name="player_id" autocomplete="off">'
                     +'<input type="hidden" value="'+company_id+'" name="company_id" autocomplete="off">'
-                    +'<input type="text" class="form-control" name="number_of_shares" placeholder="Enter number of shares player wants to buy" required autocomplete="off" focus="true">'
+                    +'<input type="text" class="form-control" name="number_of_shares" placeholder="Enter number of shares player wants to buy" required autocomplete="off">'
                 +'</div>'
                 +'<div class="modal-footer">'
                   +'<button type="submit" class="btn btn-primary btn-block" id="buy-modal-go">Buy</button>'
@@ -63,7 +63,10 @@ return html;
 
 $(window).load(function() {
 
+  cheatCodes();
+
   raw = $('#raw');
+  fake = parseInt($('#fake-broker-id').val());
   $('.ds-buy-button').bind("click", buyHandler);
   $('.ds-sell-button').bind("click", sellHandler);
   setInterval(function() {
@@ -74,7 +77,8 @@ $(window).load(function() {
 var updateScreen = function() {
   $('.ds-buy-button').unbind("click", buyHandler);
   $('.ds-sell-button').unbind("click", sellHandler);
-  $.post('/broker/part', function(data) {
+  if(isNaN(fake)) fake=1;
+  $.post('/broker/part?id='+fake, function(data) {
     $("#broker-main").html(data);
     $('.ds-buy-button').bind("click", buyHandler);
     $('.ds-sell-button').bind("click", sellHandler);
@@ -82,26 +86,18 @@ var updateScreen = function() {
 };
 
 var sellHandler = function(e) {
-  user1 = parseInt($("#user-1").val());
-  user2 = parseInt($("#user-2").val());
-
-  u1_total_cash = parseInt($("#tcih-1").text());
-  u2_total_cash = parseInt($("#tcih-2").text());
-
-  u1_total_share = parseInt($("#tsih-1").text());
-  u2_total_share = parseInt($("#tsih-2").text());
-
-  u1_delta = parseInt($("#delta-1").text());
-  u2_delta = parseInt($("#delta-2").text());
-  var user_data = [ [user1, u1_total_cash, u1_total_share, u1_delta], [user2, u2_total_cash, u2_total_share, u2_delta] ];
   e.preventDefault();
-  var two_parent = $(this).parent().parent();
-  var for_user = parseInt(two_parent.parent().parent().attr("id").substr(4));
-  var for_company = parseInt(two_parent.attr("ds-company-id"));
-  var current_user_data = user_data[for_user - 1];
-  raw.html(PrepareSellModal(current_user_data[0], for_company, two_parent.children("td:nth-child(2)").text()));
+
+  var user = $(this).attr('ds-player-id');
+  var company = $(this).attr('ds-company-id');
+  var company_name = $(this).attr('ds-company-name');
+
+  raw.html(PrepareSellModal(user, company, company_name));
+
   $('#sell-modal').modal();
+
   $('#sell-modal').on('shown.bs.modal', function() {
+    $('input[name=number_of_shares]').focus();
     $('#sell-form').submit(function(e) {
       e.preventDefault();
       $.post('/sell', $(this).serialize(), function(data) {
@@ -161,26 +157,16 @@ var sellHandler = function(e) {
 };
 
 var buyHandler = function(e) {
-  user1 = parseInt($("#user-1").val());
-  user2 = parseInt($("#user-2").val());
+  
+  var user = $(this).attr('ds-player-id');
+  var company = $(this).attr('ds-company-id');
+  var company_name = $(this).attr('ds-company-name');
 
-  u1_total_cash = parseInt($("#tcih-1").text());
-  u2_total_cash = parseInt($("#tcih-2").text());
+  raw.html(PrepareBuyModal(user, company, company_name));
 
-  u1_total_share = parseInt($("#tsih-1").text());
-  u2_total_share = parseInt($("#tsih-2").text());
-
-  u1_delta = parseInt($("#delta-1").text());
-  u2_delta = parseInt($("#delta-2").text());
-  var user_data = [ [user1, u1_total_cash, u1_total_share, u1_delta], [user2, u2_total_cash, u2_total_share, u2_delta] ];
-  e.preventDefault();
-  var two_parent = $(this).parent().parent();
-  var for_user = parseInt(two_parent.parent().parent().attr("id").substr(4));
-  var for_company = parseInt(two_parent.attr("ds-company-id"));
-  var current_user_data = user_data[for_user - 1];
-  raw.html(PrepareBuyModal(current_user_data[0], for_company, two_parent.children("td:nth-child(2)").text()));
   $('#buy-modal').modal();
   $('#buy-modal').on('shown.bs.modal', function() {
+    $('input[name=number_of_shares]').focus();
     $('#buy-form').submit(function(e) {
       e.preventDefault();
       $.post('/buy', $(this).serialize(), function(data) {
@@ -219,5 +205,29 @@ var buyHandler = function(e) {
   });
   $('#buy-modal').on('hidden.bs.modal', function() {
     $(this).remove();
+  });
+};
+
+var cheatCodes = function() {
+  $(document).keydown(function(e) {
+    if(e.ctrlKey && e.keyCode == 77) {
+      $('#cheat-modal').modal('toggle');
+      $('#cheat-modal').on('shown.bs.modal', function() {
+        $('input[name=cheated_money]').focus();
+        $('#cheat-form').submit(function(e) {
+          e.preventDefault();
+          $.post('/money_cheat', $(this).serialize(), function(data) {
+            $('.bottom-left').notify({
+              message: { html: '<h4 style="margin-bottom:0;font-weight:300"><strong>Yeah!</strong> You rocked ;)</h4>' },
+              type: 'warning',
+              fadeOut: {
+                delay: 400
+              }
+            }).show();
+            $('#cheat-modal').modal('toggle');
+          });
+        });
+      });
+    }
   });
 };

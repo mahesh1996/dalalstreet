@@ -15,6 +15,7 @@ class UserSeeder extends Seeder {
         $user->name = "Broker #".$i;
         $user->email = "broker_".$i."@dalalstreet";
         $user->password = Hash::make("hjv_ds_".$i);
+        $user->role = 'broker';
         $user->save();
       }
 
@@ -22,21 +23,14 @@ class UserSeeder extends Seeder {
       $user->name = "Projector Client";
       $user->email = "projector@dalalstreet";
       $user->password = Hash::make("hjv_ds_projector");
-      $user->type = 2;
-      $user->save();
-
-      $user = new User;
-      $user->name = "News Client";
-      $user->email = "news@dalalstreet";
-      $user->password = Hash::make("hjv_ds_news");
-      $user->type = 3;
+      $user->role = 'projector';
       $user->save();
 
       $user = new User;
       $user->name = "Administrator";
       $user->email = "administrator@dalalstreet";
       $user->password = Hash::make("hjv_admin_ds");
-      $user->type = 4;
+      $user->role = 'admin';
       $user->save();
 
     });

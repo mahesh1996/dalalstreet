@@ -5,7 +5,7 @@ $(window).load(function() {
 });
 
 var updateScreen = function() {
-  $.post('/admin/part', function(data) {
-    $("#admin-updater-main").html(data);
+  $.post('/player_details/part', function(data) {
+    $("#detail-updater").html(data);
   }, "html");
 };

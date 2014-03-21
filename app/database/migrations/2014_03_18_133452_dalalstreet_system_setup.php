@@ -7,6 +7,11 @@ class DalalstreetSystemSetup extends Migration {
 
   public function up() {
 
+    Schema::create('players', function($table) {
+      $table->increments('id')->unsigned();
+      $table->decimal('total_cash_in_hand', 9, 0)->default(Config::get('dalalstreet.starting_cash'))->unsigned();
+    });
+
     Schema::create('companies', function($table) {
       $table->increments('id')->unsigned();
       $table->string('name');
@@ -14,12 +19,7 @@ class DalalstreetSystemSetup extends Migration {
       $table->decimal('total_shares', 9, 0)->unsigned();
       $table->decimal('available_shares', 9, 0)->unsigned();
       $table->decimal('market_price', 10, 2)->unsigned();
-      $table->decimal('old_market_price', 10, 2)->default(0);
-    });
-
-    Schema::create('players', function($table) {
-      $table->increments('id')->unsigned();
-      $table->decimal('total_cash_in_hand', 9, 0)->default(Config::get('dalalstreet.starting_cash'))->unsigned();
+      $table->decimal('old_market_price', 10, 2)->unsigned()->default(0);
     });
 
     Schema::create('company_player', function($table) {
@@ -35,8 +35,8 @@ class DalalstreetSystemSetup extends Migration {
 
   public function down() {
     Schema::drop('company_player');
-    Schema::drop('players');
     Schema::drop('companies');
+    Schema::drop('players');
   }
 
 }

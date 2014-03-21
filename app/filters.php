@@ -44,15 +44,6 @@ Route::filter('auth.basic', function()
 	return Auth::basic();
 });
 
-Route::filter('admin', function() {
-  $user = Auth::user();
-
-  if($user->type == 1) return Redirect::to('/broker');
-  if($user->type == 2) return Redirect::to('/projector');
-  if($user->type == 3) return Redirect::to('/news');
-
-});
-
 /*
 |--------------------------------------------------------------------------
 | Guest Filter
@@ -64,8 +55,12 @@ Route::filter('admin', function() {
 |
 */
 
+Route::filter('admin', function() {
+  if (Auth::user()->role != 'admin') return Redirect::to('/');
+});
+
 Route::filter('guest', function() {
-	if (Auth::check()) return Redirect::to('/broker');
+	if (Auth::check()) return Redirect::to(Auth::user()->role);
 });
 
 /*

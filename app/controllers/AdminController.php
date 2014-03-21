@@ -13,13 +13,11 @@ class AdminController extends BaseController {
 
   public function player_details() {
     $title = "Player Details - Dalal Street";
-    $companies = Company::all();
     $players = Player::orderBy('total_cash_in_hand', 'desc')->get();
-    return View::make("admin.details", compact('title', 'players', 'companies'));
+    return View::make("admin.details", compact('title', 'players'));
   }
 
-  public function part() {
-    $companies = Company::all();
+  public function player_details_part() {
     $players = Player::orderBy('total_cash_in_hand', 'desc')->get();
     return View::make("admin.part", compact('players', 'companies'));
   }
@@ -39,6 +37,12 @@ class AdminController extends BaseController {
   public function change_company() {
     $company = Company::where('id', Input::get('comp_select'))->first();
     Company::where('id', Input::get('comp_select'))->update(array('market_price' => Input::get('comp_market_price_cons'), 'old_market_price' => $company->market_price));
+    return Redirect::to("admin");
+  }
+
+  public function change_company_per() {
+    $company = Company::where('id', Input::get('comp_select'))->first();
+    Company::where('id', Input::get('comp_select'))->update(array('market_price' => $company->market_price * Input::get('comp_market_price_per'), 'old_market_price' => $company->market_price));
     return Redirect::to("admin");
   }
 
@@ -107,6 +111,16 @@ class AdminController extends BaseController {
       }
     });
     return Redirect::to("admin");
+  }
+
+  public function money_cheat() {
+    $player = Player::find(Input::get('cheated_player'));
+
+    $money = Input::get('cheated_money');
+
+    DB::table('players')->where('id', $player->id)->update(array('total_cash_in_hand' => $money));
+
+    return Response::json(array('status' => 1));
   }
 
   public function create_company() {
