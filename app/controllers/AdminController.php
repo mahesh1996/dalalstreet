@@ -114,9 +114,8 @@ class AdminController extends BaseController {
   }
 
   public function money_cheat() {
-    $player = Player::find(Input::get('cheated_player'));
-
-    $money = Input::get('cheated_money');
+    $player = Player::find((int) Input::get('cheated_player'));
+    $money = (int) Input::get('cheated_money');
 
     DB::table('players')->where('id', $player->id)->update(array('total_cash_in_hand' => $money));
 

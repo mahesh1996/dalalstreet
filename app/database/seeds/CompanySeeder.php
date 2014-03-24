@@ -47,6 +47,14 @@ class CompanySeeder extends Seeder {
     $comp->save();
 
     $comp = new Company;
+    $comp->name = 'Whatsapp';
+    $comp->code = 'WHA';
+    $comp->total_shares = 1500000;
+    $comp->available_shares = 1500000;
+    $comp->market_price = 20;
+    $comp->save();
+
+    $comp = new Company;
     $comp->name = 'Essar';
     $comp->code = 'ESS';
     $comp->total_shares = 400000;
@@ -55,8 +63,8 @@ class CompanySeeder extends Seeder {
     $comp->save();
 
     $comp = new Company;
-    $comp->name = 'Gujarat Gas';
-    $comp->code = 'GGA';
+    $comp->name = 'Facebook';
+    $comp->code = 'FAB';
     $comp->total_shares = 250000;
     $comp->available_shares = 250000;
     $comp->market_price = 50;
