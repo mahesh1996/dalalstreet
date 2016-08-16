@@ -1,5 +1,12 @@
 <?php
 
+$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+
+$host = $url["host"];
+$username = $url["user"];
+$password = $url["pass"];
+$database = substr($url["path"], 1);
+
 return array(
 
 	/*
@@ -52,12 +59,14 @@ return array(
 			'prefix'   => '',
 		),
 
+    // mysql://b5302d1bdc16bf:28657af0@us-cdbr-iron-east-04.cleardb.net/heroku_8e4f7609f64cbdd?reconnect=true
+
 		'mysql' => array(
 			'driver'    => 'mysql',
-			'host'      => 'localhost',
-			'database'  => 'dalalstreet',
-			'username'  => 'root',
-			'password'  => 'root',
+      'host'      => $host,
+      'database'  => $database,
+      'username'  => $username,
+      'password'  => $password,
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
