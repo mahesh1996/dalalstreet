@@ -28,7 +28,7 @@ class DalalstreetSystemSetup extends Migration {
       $table->decimal('total_shares', 9, 0)->unsigned();
       $table->foreign('company_id')->references('id')->on('companies');
       $table->foreign('player_id')->references('id')->on('players');
-      $table->index(array('company_id', 'player_id'));
+      // $table->index(array('company_id', 'player_id'));
     });
 
   }
