@@ -12,10 +12,10 @@ class PlayerSeeder extends Seeder {
     DB::transaction(function() use($total_companies, $total_players) {
       for($i=1; $i<=$total_players; $i++) {
         $player = new Player;
-        $player->save();
         for($j=1; $j<=$total_companies; $j++) {
           $player->companies()->attach($j);
         }
+        $player->save();
       }
     });
 
