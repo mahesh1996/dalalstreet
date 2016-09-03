@@ -13,7 +13,7 @@ return array(
 	|
 	*/
 
-	'debug' => false,
+	'debug' => true,
 
 	/*
 	|--------------------------------------------------------------------------
@@ -26,7 +26,8 @@ return array(
 	|
 	*/
 
-	'url' => getenv("APP_URL"),
+//	'url' => getenv("APP_URL"),
+	'url' => "http://localhost:8002",
 
 	/*
 	|--------------------------------------------------------------------------
@@ -60,12 +61,13 @@ return array(
 	|--------------------------------------------------------------------------
 	|
 	| This key is used by the Illuminate encrypter service and should be set
-	| to a random, 32 character string, otherwise these encrypted strings
+	| to a random, PfWlTuqwUy3bdnW8WeUqmFASAR7Hya0K character string, otherwise these encrypted strings
 	| will not be safe. Please do this before deploying an application!
 	|
 	*/
 
-	'key' => getenv("APP_SECRET"),
+	//'key' => getenv("APP_SECRET"),
+	'key' => "PfWlTuqwUy3bdnW8WeUqmFASAR7Hya0K",
 
 	/*
 	|--------------------------------------------------------------------------

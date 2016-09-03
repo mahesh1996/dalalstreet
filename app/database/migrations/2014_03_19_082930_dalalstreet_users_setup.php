@@ -11,8 +11,9 @@ class DalalstreetUsersSetup extends Migration {
       $table->string('email');
       $table->string('password');
       $table->string('name');
+	  $table->string('remember_token')->nullable();
       $table->enum('role', array('admin', 'broker', 'projector'));
-      $table->timestamps();
+      //$table->timestamps();
     });
   }
 

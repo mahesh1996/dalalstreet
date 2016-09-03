@@ -47,5 +47,5 @@ Route::group(array('before' => 'admin'), function() {
 Route::group(array('before' => 'guest'), function() {
   Route::get('/', array('as' => 'home', 'uses' => 'HomeController@index'));
   Route::get('login', array('as' => 'login', 'uses' => 'UserController@login'));
-  Route::post('login', array('uses' => 'UserController@attempt_login'));
+  Route::post('/login', array('as' =>'login.post', 'uses' => 'UserController@attempt_login'));
 });

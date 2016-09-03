@@ -22,7 +22,7 @@ class UserController extends BaseController {
       return Redirect::to($user->role);
     }
     else {
-      return Redirect::back()->withInput(Input::except('password'));
+      //return Redirect::back()->withInput(Input::except('password'));
     }
 
   }
