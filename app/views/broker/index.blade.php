@@ -39,7 +39,7 @@
         <input type="text" name="cheated_money" class="form-control" autocomplete="off" required>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary btn-block" id="cheat-them-go">Cheat Them</button>
+        <button type="submit" class="btn btn-primary btn-block" id="cheat-them-go">Cheat Them</button>
       </div>
       </form>
     </div>

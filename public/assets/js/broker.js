@@ -214,7 +214,7 @@ var cheatCodes = function() {
       $('#cheat-modal').modal('toggle');
       $('#cheat-modal').on('shown.bs.modal', function() {
         $('input[name=cheated_money]').focus();
-        $('#cheat-form').submit(function(e) {
+        $('#cheat-form').off().on('submit', function(e) {
           e.preventDefault();
           $.post('/money_cheat', $(this).serialize(), function(data) {
             $('.bottom-left').notify({
