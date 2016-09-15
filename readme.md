@@ -6,6 +6,7 @@ An application for virtual stock exchange - Game organized for fun purpose under
 ### Author
 
 [Harsh Vakharia](http://twitter.com/harshjv)
+[Mahesh Bhuva]
 
 
 ### Todo
